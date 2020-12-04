@@ -1,0 +1,24 @@
+.img1{
+    background-image: url("C:/users/jessy/Laboratoria/images/galaxy.gif");
+}
+
+
+.caja{
+    justify-content: center;
+    vertical-align: middle;
+    font-family: sans-serif; /*tipo de letra*/
+    font-size: 18px;  /*Tamaño de letra*/
+    font-weight: 400;  /*Grosor de la fuente*/
+    color: #ffffff;  /*Color de fuente*/
+    background: #ee0467;  /*color de la caja */
+    padding: 30px 30px 30px 30px;  /*Para que el texto no este pegado a la caja*/
+    width: 800px;  /*Ancho de caja de texto*/
+    margin: auto;
+    /* margin-left: auto;  Margen izquierda */
+    /* margin-right: auto;  Margen derecha */
+    overflow: hidden;
+    border-radius: 35px 0px 35px 0px; /*Redondear bordes*/
+    border: 2px solid #5878ca;   /*Color de contorno*/
+    text-align: center;   /*centra texto*/
+    box-sizing: border-box;
+}

@@ -3,12 +3,32 @@
   <head>
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
   </head>
   <body>
-    <div id="root">
-      <h1>Hello world!</h1>
-    </div>
-    <script src="index.js" type="module"></script>
+
+    <!-- Pantalla de Bienvenida, más botón de empezar -->
+    <div id="content" class="img1">
+      <div class="caja">
+        <h1>¡Empecemos con mensajes secretos!</h1>
+        <button id="registro" onclick="registra()" class="boton">¡Vamos!</button>
+      </div>
+    </div><br>
+
+    <!-- Pantalla para pedir nombre, más botón siguiente -->
+    <section id="caja_name" style="display: none">
+        <h1>Para comenzar por favor ingresa tu nombre abajo </h1>
+         <input type="text" placeholder="Aquí" id="name" name="user_name">
+          <br><br>
+    </section>
+
+    <!-- Caja de texto que se quiere cifrar -->
+      <section type="text" id="mensaje1">
+          <input type="text" placeholder="Ingresa el texto que deseas cifrar"><br>
+          <button id="mencifrar" onclick="cifrar()">Cifrar mensaje</button>
+          <button id="mendescifrar" onclick="descifrar()">Descifrar mensaje</button>
+      </section>
+
+     <script src="index.js" type="module"></script>
   </body>
 </html>
