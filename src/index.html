@@ -2,32 +2,60 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Caesar Cipher</title>
+    <title>Cipher</title>
     <link rel="stylesheet" href="style.css" type="text/css" />
   </head>
   <body>
 
-    <!-- Pantalla de Bienvenida, más botón de empezar -->
-    <div id="content" class="img1">
-      <div class="caja">
-        <h1>¡Empecemos con mensajes secretos!</h1>
-        <button id="registro" onclick="registra()" class="boton">¡Vamos!</button>
+    <!-- Fondo animado: Pantalla principal -->
+    <div id="pantallaUno" class="pantallaUno">
+      <div class="contenedor1">
+        <h1>Top Secret</h1>
+        <div class="imagen1">
+          <img src="candado1.png" alt="">
+        </div>
+
+          <div class="contenedor2">
+              <div class="titulo">
+                <h2>Empecemos con mensajes secretos!</h2>
+                  <button value="inicio" style="cursor:pointer" id="btn-uno" class="btn-siguiente">Go!</button> 
+              </div>
+
+            </div> 
+
       </div>
-    </div><br>
+    </div>
 
-    <!-- Pantalla para pedir nombre, más botón siguiente -->
-    <section id="caja_name" style="display: none">
-        <h1>Para comenzar por favor ingresa tu nombre abajo </h1>
-         <input type="text" placeholder="Aquí" id="name" name="user_name">
-          <br><br>
-    </section>
+  <!-- Pantalla de istrucciones -->
 
-    <!-- Caja de texto que se quiere cifrar -->
-      <section type="text" id="mensaje1">
-          <input type="text" placeholder="Ingresa el texto que deseas cifrar"><br>
-          <button id="mencifrar" onclick="cifrar()">Cifrar mensaje</button>
-          <button id="mendescifrar" onclick="descifrar()">Descifrar mensaje</button>
-      </section>
+    <div id="pantallaDos" class="pantallaDos" style="display:none">
+        <div class="tituloInstruccion">
+            <h2>Bienvenid@ a Top Secret</h2><br><br>
+              <div class="subtituloInstruccion">
+                <h2>Instrucciones</h2></div>
+                  <div class="parrafos">
+                    <p class="parrafo">¿Quieres escribir mensajes secretos y que nadie sepa qué dice originalmente?</p>
+                    <p class="parrafo">¡Entonces estas en el lugar correcto!</p>
+                    <p class="parrafo">Top Secret te ayudará a realizarlo, lo único que tienes que hacer es escribir</p>
+                    <p class="parrafo">el mensaje que quieres cifrar, más el número de desplazamiento.</p>
+                    <p class="parrafo">En cuanto presiones el botón "Cifrar", te mostrará tu mensaje oculto.</p>
+                    <p class="parrafo">Y si lo que quieres es descifrarlo de vuelta solo copia y pega el mensaje cifrado</p>
+                    <p class="parrafo">para después presionar el botón "Descifrar" y listo, tendrás de vuelta tu mensaje original.</p>
+                    <p class="parrafo">Asi que, ¿qué esperas para intentarlo?</p>
+                  </div>
+              <button value="instructions" style="cursor:pointer" id="btn-dos" class="btn-siguiente">Atrevéte</button> 
+
+        </div>    
+    </div>
+
+    <!-- Pantalla de caja de texto que se quiere cifrar -->
+      <div type="text" id="pantallaTres" class="pantallaTres" style="display: none">
+        <textarea class="caja" id="mensaje1" type="text" placeholder="Escribe aquí tu mensaje"></textarea> <!-- Mensaje que pondra el usuario para cifrar -->
+        <textarea  class="caja" id="mensaje2" type="text"></textarea><br><br><br> <!-- Caja de texto donde aparecera el texto descifrado -->
+        <input class="desplazar" type="number" id="desplazamiento" size="4" placeholder="Número de desplazamiento">  <!-- Se colocará el número de desplazamiento que el usuario desee -->
+        <button type="button" style="cursor:pointer" id="cifrar" class="btn-cifrado">Cifrar mensaje</button>
+        <button type="button" style="cursor:pointer" id="descifrar" class="btn-cifrado">Descifrar mensaje</button>
+      </div>
 
      <script src="index.js" type="module"></script>
   </body>
